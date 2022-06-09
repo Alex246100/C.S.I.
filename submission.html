@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <title>Bootstrap 5 Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,15 +37,12 @@
     color: black;
   }
 
-  a {
+  #alink {
     color: white;
   }
-  a:hover {
+  #alink:hover {
     color: gray;
   }
-a:visited{
-  color: white;
-}
   .navbar {
     background-color: teal;
   }
@@ -84,47 +82,47 @@ a:visited{
     </div>
   </div>
   </nav>
-
-  <div class="offcanvas offcanvas-start" id="demo">
-    <div class="offcanvas-header">
-      <h1 class="offcanvas-title">Heading</h1>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+<div class="container">
+<div class= "col-8 offset-2">
+  <form>
+<fieldset class="mt-4 mb-4">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label">Name</label>
+      <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp">
+      <div id="nameHelp" class="form-text">Let us know who's sharing this awesome post!</div>
     </div>
-    <div class="offcanvas-body">
-      <p>Some text lorem ipsum.</p>
-      <p>Some text lorem ipsum.</p>
-      <button class="btn btn-secondary" type="button">A Button</button>
+    <div class="mb-3">
+      <label for="headline" class="form-label">Headline</label>
+      <input type="text" class="form-control" id="headline">
+      <div id="headlineHelp" class="form-text">Give your post a catchy headline! No more than 10 words please.</div>
     </div>
-  </div>
-  <div id="jumbo" class="container-fluid p-5 bg-navdeezblue text-red text-center">
-    <h1>Submit</h1>
-  </div>
-  <div id="contacts"class="container mt-2">
-    <div class="row">
-      <div class="col-12">
-        <h3 class="text-center">Submission Guidlines</h3>
-        <p class="text-center">Plese submit any CBHS news, student accomplishments, photos or videos from CBHS events, expedition work, poetry, stories, coding projects, art, songs, sport highlights, or announcemnts about upcoming events. Thank You!</p>
-      </div>
+    <div class="mb-3">
+      <label for="descriptionArea" class="form-label">Desciption</label>
+      <textarea id ="descriptionArea" class="form-control" aria-label="With textarea"></textarea>
     </div>
-  </div>
-
-
-
-
-
-
-<div id="Email"class="container mt-2">
-  <div class="row">
-    <div class="col-sm-12">
-      <h3 class="text-center email-links">
-      <div class="email-link text-center">
-        <h2>Submit a Post</h2>
-        <a href="submission.html">Click Here To Submission Page</a>
-
-      </div>
-    </div>
-  </div>
+    <select class="form-select mb-3" aria-label="Default select example">
+      <option selected>Submission Type</option>
+      <option value="1">Announcement</option>
+      <option value="2">Personal Creative Post (Art, Poetry, Photography...)</option>
+      <option value="3">News</option>
+    </select>
+    <select class="form-select mb-3" aria-label="Default select example">
+      <option selected>Grade</option>
+      <option value="1">9</option>
+      <option value="2">10</option>
+      <option value="3">11</option>
+      <option value="3">12</option>
+    </select>
+    <label for="headline" class="form-label">Crew</label>
+    <input type="text" class="form-control" id="headline">
+    <div id="headlineHelp" class="form-text">Tell us what crew you are in.</div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</fieldset>
+  </form>
 </div>
+</div>
+
+
 
 <footer class="bg-dark text-center text-lg-start">
   <!-- Grid container -->
@@ -181,19 +179,11 @@ a:visited{
   </div>
   <!-- Copyright -->
 </footer>
-
-
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-</div>
